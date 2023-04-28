@@ -77,9 +77,3 @@ body {
 .social-icons i {
   color: #505f79;
 }
-
-.social-icons li{
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
