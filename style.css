@@ -44,8 +44,6 @@ body {
   color: #172b4d;
 }
 
-
-
 .intro {
   background: url("./assets/bg.png") no-repeat;
   background-color: white;
@@ -149,9 +147,9 @@ li {
 .card .canopy {
   color: #344563;
   font-style: normal;
-font-weight: 600;
-font-size: 13px;
-line-height: 16px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
   text-transform: uppercase;
 }
 
@@ -232,12 +230,12 @@ line-height: 16px;
   -o-border-radius: 0 50px 0 0;
 }
 
-.title-about{
+.title-about {
   font-style: normal;
-font-weight: 700;
-font-size: 40px;
-line-height: 52px;
-color: #172B4D
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: #172b4d;
 }
 
 .catgories {
