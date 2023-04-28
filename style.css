@@ -10,7 +10,7 @@ body {
 }
 
 .navbar {
-  margin-top: 58px;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
   padding: 0 24px;
