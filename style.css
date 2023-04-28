@@ -44,17 +44,21 @@ body {
   color: #172b4d;
 }
 
-.first.intro {
-  background: white url("./assets/bg.png") no-repeat;
-}
+
 
 .intro {
+  background: url("./assets/bg.png") no-repeat;
   background-color: white;
-  padding: 20% 5%;
+  padding: 128px 24px;
   background-size: cover;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  border-radius: 0 0 0 50px;
+  -webkit-border-radius: 0 0 0 50px;
+  -moz-border-radius: 0 0 0 50px;
+  -ms-border-radius: 0 0 0 50px;
+  -o-border-radius: 0 0 0 50px;
 }
 
 .let-connect {
@@ -104,7 +108,7 @@ li {
 }
 
 .card {
-  width: 90vw;
+  width: 327px;
   margin: auto;
   background-color: white;
   padding: 16px;
@@ -128,7 +132,7 @@ li {
   color: #172b4d;
   font-style: normal;
   font-weight: 700;
-  font-size: 12vw;
+  font-size: 32px;
   line-height: 44px;
 }
 
@@ -145,9 +149,9 @@ li {
 .card .canopy {
   color: #344563;
   font-style: normal;
-  font-weight: 600;
-  font-size: 4vw;
-  line-height: 16px;
+font-weight: 600;
+font-size: 13px;
+line-height: 16px;
   text-transform: uppercase;
 }
 
@@ -186,10 +190,10 @@ li {
   color: #396df2;
   font-style: normal;
   font-weight: 500;
-  font-size: 5vw;
+  font-size: 17px;
+  padding: 12px 4px;
   line-height: 24px;
-  padding: 8px;
-  width: 40vw;
+  width: 45%;
   background: transparent;
   border: 1px solid #396df2;
   border-radius: 8px;
@@ -214,16 +218,26 @@ li {
   background-color: #2230d2;
 }
 
-.about-myself {
-  padding: 144px 24px;
+.intro-about {
   background-color: white;
-  width: 100%;
-  margin: 0;
+  padding: 128px 24px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   border-radius: 0 50px 0 0;
   -webkit-border-radius: 0 50px 0 0;
   -moz-border-radius: 0 50px 0 0;
   -ms-border-radius: 0 50px 0 0;
   -o-border-radius: 0 50px 0 0;
+}
+
+.title-about{
+  font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 52px;
+color: #172B4D
 }
 
 .catgories {
