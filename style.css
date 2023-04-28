@@ -100,14 +100,14 @@ li {
   gap: 25vw;
   padding: 0 1vw;
   margin-top: 25vw;
-  margin-bottom: 36vw;
+  margin-bottom: 114px;
 }
 
 .card {
   width: 90vw;
   margin: auto;
   background-color: white;
-  padding: 2vw;
+  padding: 16px;
   border: 1px solid #dfe1e6;
   border-radius: 1rem;
   -webkit-border-radius: 1rem;
@@ -215,15 +215,15 @@ li {
 }
 
 .about-myself {
-  padding: 40.25vw 6vw 78.5vw 6vw;
+  padding: 144px 24px;
   background-color: white;
   width: 100%;
   margin: 0;
-  border-radius: 0 25vw 0 0;
-  -webkit-border-radius: 0 25vw 0 0;
-  -moz-border-radius: 0 25vw 0 0;
-  -ms-border-radius: 0 25vw 0 0;
-  -o-border-radius: 0 25vw 0 0;
+  border-radius: 0 50px 0 0;
+  -webkit-border-radius: 0 50px 0 0;
+  -moz-border-radius: 0 50px 0 0;
+  -ms-border-radius: 0 50px 0 0;
+  -o-border-radius: 0 50px 0 0;
 }
 
 .catgories {
