@@ -218,7 +218,7 @@ li {
 
 .intro-about {
   background-color: white;
-  padding: 228px 24px;
+  padding: 128px 24px;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -285,13 +285,12 @@ li {
   background-image: url("./assets/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: -100px;
   background-position: center;
-  border-radius: 70px 0 0 0;
-  -webkit-border-radius: 70px 0 0 0;
-  -moz-border-radius: 70px 0 0 0;
-  -ms-border-radius: 70px 0 0 0;
-  -o-border-radius: 70px 0 0 0;
+  border-radius: 125px 0 0 0;
+  -webkit-border-radius: 125px 0 0 0;
+  -moz-border-radius: 125px 0 0 0;
+  -ms-border-radius: 125px 0 0 0;
+  -o-border-radius: 125px 0 0 0;
 }
 
 .contact-form-section-wrapper{

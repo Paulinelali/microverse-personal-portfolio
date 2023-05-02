@@ -285,7 +285,6 @@ li {
   background-image: url("./assets/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: -100px;
   background-position: center;
   border-radius: 70px 0 0 0;
   -webkit-border-radius: 70px 0 0 0;
@@ -305,6 +304,7 @@ li {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  
 }
 
 .contact-form-section-wrapper form{
