@@ -308,13 +308,6 @@ form {
   gap: 12px;
 }
 
-.footer-text h1{
-  margin: 0px
-}
-.footer-text p{
-  margin-top: 0px
-}
-
 form {
   padding: 0 116px;
 }
@@ -360,6 +353,7 @@ form textarea {
   color: #fff;
   text-align: center;
   justify-content: center;
+  margin: 0;
 }
 
 .footer-text p {
@@ -369,4 +363,5 @@ form textarea {
   line-height: 28px;
   text-align: center;
   color: #ebebff;
+  margin-top: 0;
 }
