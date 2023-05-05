@@ -43,7 +43,7 @@ body {
 }
 
 .introc-content {
-  padding: 359px 260px 0 260px;
+  padding: 284px 260px 0 260px;
 }
 
 .introc-content h1 {
@@ -308,6 +308,13 @@ form {
   gap: 12px;
 }
 
+.footer-text h1{
+  margin: 0px
+}
+.footer-text p{
+  margin-top: 0px
+}
+
 form {
   padding: 0 116px;
 }
@@ -315,10 +322,12 @@ form {
 form input {
   width: 100%;
   height: 48px;
+  padding-left: 16px;
 }
 
 form textarea {
   width: 100%;
+  padding-left: 16px;
 }
 
 .footer-submit-btn {
