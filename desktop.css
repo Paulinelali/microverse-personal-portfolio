@@ -55,6 +55,16 @@ body {
   align-items: center;
   letter-spacing: 0.37px;
   color: #091e42;
+  animation: slow-in 5s forwards;
+}
+
+@keyframes slow-in {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 .introc-content p {
