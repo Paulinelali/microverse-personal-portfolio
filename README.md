@@ -141,7 +141,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/Paulinelali/hello-microverse-project
+  git clone https://github.com/Paulinelali/microverse-personal-portfolio.git
 ```
 
 ### Install
@@ -184,10 +184,10 @@ using netlify
 
 ## 👥 Authors <a name="authors"></a>
 
-
 👤 **Ayomide Sunday Emmanuel**
+👤 **Adedoyin Adebayo**
 
-- GitHub: https://github.com/Paulinelali/hello-microverse-project
+- GitHub: https://github.com/Paulinelali/microverse-personal-portfolio.git
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -232,8 +232,6 @@ Christian
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- MIT LICENSE -->
 
 ## 📝 License <a name="license"></a>
 

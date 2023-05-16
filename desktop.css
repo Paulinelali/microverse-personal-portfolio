@@ -9,6 +9,10 @@ body {
   display: none;
 }
 
+.mobile-menu {
+  display: none;
+}
+
 .header {
   display: grid;
   grid-template-columns: 1fr;
@@ -81,11 +85,6 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-
-  /* identical to box height, or 150% */
-
-  /* Primary/B300 */
-
   color: #7f8cff;
 }
 
@@ -103,7 +102,6 @@ ul {
   text-decoration: none;
 }
 
-/* work */
 .works-container {
   display: flex;
   flex-direction: column;

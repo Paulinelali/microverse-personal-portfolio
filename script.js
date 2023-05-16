@@ -15,20 +15,16 @@ tags.forEach(tag => {
 })
 
 function toggleMenu() {
-    // cancelMobile.classList.toggle("hide");
     mobileMenu.classList.toggle("hide");
     hamburger.classList.toggle("hide");
     bgMobile.classList.toggle("hide");
-    // logo.classList.toggle("hide");
     bgMobile.classList.toggle("add-bg-on-mobile");
 }
 
 
 function closeMenu() {
-    // cancelMobile.classList.toggle("hide");
     mobileMenu.classList.toggle("hide");
     hamburger.classList.toggle("hide");
-    // logo.classList.toggle("hide");
     bgMobile.classList.toggle("hide");
     bgMobile.classList.toggle("add-bg-on-mobile");
 }
