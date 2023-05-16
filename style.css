@@ -48,7 +48,14 @@ body {
 } */
 
 .mobile-menu{
-  
+  background-color: rgba(96, 112, 255, 1);
+  backdrop-filter: blur(9px);
+  mix-blend-mode: multiply;
+  width: 100%; position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  justify-content: space-around;
+  padding-top: 62px;
 }
 
 .mobile-menu ul{
