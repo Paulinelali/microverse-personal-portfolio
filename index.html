@@ -4,22 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="style.css">
     <link rel="stylesheet" media="screen and (min-width: 601px)" href="desktop.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/97d9fb687f.js" crossorigin="anonymous"></script>
     <title>Ayomide S.E.P</title>
 </head>
 <body>
     <header class="header">
-        <nav class="nav pad-aside">
-            <a href="#">
+        <nav class="nav pad-aside bg-mobile ">
+            <a href="#" class="logo">
                 <img src="./assets/Logo.png" alt="fir">
             </a>
-            <a href="#"><img src="./assets/hamburger.png" class="hamburger" alt="se"></a>
-            <div class="nav-link-desktop">
+            <a href="#"  class="hamburger-container" ><img src="./assets/hamburger.png" class="hamburger" alt="se"></a>
+
+            <div class="mobile-menu hide ">
+                <ul>
+                    <li><a href="#portfolio" class="mobile-menu-link">Portfolio</a></li>
+                    <li><a href="#about" class="mobile-menu-link">About</a></li>
+                    <li><a href="#contact" class="mobile-menu-link">Contact</a></li>
+                </ul>
+                <div class="">
+                    <img src="./assets2/Normal Button/Tertiary/Icons/Icon.png" class="cancel-mobile" style="object-fit: contain;" alt="">
+                </div>
+            </div>
+            <div class="nav-link-desktop hide">
                 <ul>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">About</a></li>
@@ -28,7 +42,7 @@
             </div>
         </nav>
         <section class="intro">
-            <div class="introc-content pad-aside">
+            <div class="introc-content pad-aside" id="portfolio">
                 <h1 class="pad-aside">
                     I am Ayomide.
                 Glad to see you here!
@@ -190,7 +204,7 @@
     </section>
 
     <section class="last-section">
-    <div class="about-social">
+    <div class="about-social" id="about">
             <h2>About Myself</h2>
             <p>
                 Hello I am a software developer! I can help you build a product , feature or website. Look through some of 
@@ -247,7 +261,7 @@
     </section>
     <footer>
         <section class="footer-section pad-aside">
-            <div class="footer-text">
+            <div class="footer-text" id="contact">
                 <h1>Contact me</h1>
                 <p>
                     If you have an application you are interested in developing, a feature that you need built or a project that needs coding.
@@ -263,5 +277,7 @@
             <hr class="footer-horizontal-line">
         </section>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
