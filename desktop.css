@@ -387,3 +387,30 @@ form textarea {
   color: #ebebff;
   margin-top: 0;
 }
+
+
+/* modal popUl */
+.modal-wraper{
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-20%, -50%);
+  -webkit-transform: translate(-20%, -50%);
+  -moz-transform: translate(-20%, -50%);
+  -ms-transform: translate(-20%, -50%);
+  -o-transform: translate(-20%, -50%);
+}
+
+.blurer{
+  backdrop-filter: blur(19px);
+  background-color: red
+}
+
+
+.modal .canopy-list-wrapper{
+  display: flex
+} 
+
+.screen-cover{
+  overflow: hidden;
+} 
