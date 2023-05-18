@@ -174,5 +174,3 @@ buttons.forEach((btn) => {
     }
   });
 });
-
-
