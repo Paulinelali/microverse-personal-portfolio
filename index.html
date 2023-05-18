@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" media="screen and (max-width: 600px)" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="mobile.css">
     <link rel="stylesheet" media="screen and (min-width: 601px)" href="desktop.css">
     <link rel="stylesheet" href="modal-pop-up.css">
     <!-- fontawesome -->
@@ -25,7 +25,7 @@
             </a>
             <a href="#"  class="hamburger-container" ><img src="./assets/hamburger.png" class="hamburger" alt="se"></a>
 
-            <div class="mobile-menu hide ">
+            <div class="mobile-menu mobile-menu-wrapper hide-mobile-nav hide">
                 <ul>
                     <li><a href="#portfolio" class="mobile-menu-link">Portfolio</a></li>
                     <li><a href="#about" class="mobile-menu-link">About</a></li>
@@ -35,7 +35,7 @@
                     <img src="./assets2/Normal Button/Tertiary/Icons/Icon.png" class="cancel-mobile" alt="">
                 </div>
             </div>
-            <div class="nav-link-desktop hide">
+            <div class="nav-link-desktop hide-desktop-nav hide">
                 <ul>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">About</a></li>
@@ -288,6 +288,6 @@
 </div>
 <script src="modal-pop-up.js"></script>
 
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
 </body>
 </html>

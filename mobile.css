@@ -84,6 +84,10 @@ body {
   display: none;
 }
 
+.hide-desktop-nav {
+  display: none;
+}
+
 .header {
   padding: 58px 0 0 0;
   display: flex;

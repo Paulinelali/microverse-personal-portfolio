@@ -1,98 +1,108 @@
+const body = document.querySelector('body');
+const overlay = document.querySelector('.overlay');
+const mainBg = document.querySelector('.main-bg');
+const buttons = document.querySelectorAll('.see-projects-btn');
 
-
-
-
-const body = document.querySelector("body");
-const overlay = document.querySelector(".overlay");
-const mainBg = document.querySelector(".main-bg");
-const buttons = document.querySelectorAll(".see-projects-btn");
-
-const modalWrapper = document.querySelector(".modal-wrapper");
-
-
+const modalWrapper = document.querySelector('.modal-wrapper');
 
 const modalElement = [{
-    id : 1,
-    name : "Tonic",
-    img : "./assets/1.png",
-    type : "Canopy",
-    dev : "Back End Dev",
-    year : 2015,
-    source : "https://paulinelali.github.io/potfoilo.github.io/",
-    sourceIcon : "img-link",
-    liveLink : "link to life project",
-    stack : { 1 : "HTML", 2 : "CSS", 3 : "JavaScript", 4 : "Ruby", 5 : "Bootstrap"  },
-    tag : { 1 : "pattern", 2 : "poster", 3 : "abstraction", 4 : "people", 5 : "technology", 6 : "media", 7 : "nature", 8 : "food" },
-    price : "45",
-    btn : "Choose illustration",
-    title : "Nature",
-    tagline : "catchy look inspiring bionic form",
-    details : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.`
+  id: 1,
+  name: 'Tonic',
+  img: './assets/1.png',
+  type: 'Canopy',
+  dev: 'Back End Dev',
+  year: 2015,
+  source: 'https://paulinelali.github.io/potfoilo.github.io/',
+  sourceIcon: 'img-link',
+  liveLink: 'link to life project',
+  stack: {
+    1: 'HTML', 2: 'CSS', 3: 'JavaScript', 4: 'Ruby', 5: 'Bootstrap',
   },
-  
- {
-    id : 2,
-    name : "Tonic",
-    img : "./assets/2.png",
-    type : "Canopy",
-    dev : "Back End Dev",
-    year : 2015,
-    source : "https://paulinelali.github.io/potfoilo.github.io/",
-    sourceIcon : "img-link",
-    liveLink : "link to life project",
-    stack : { 1 : "HTML", 2 : "CSS", 3 : "JavaScript", 4 : "Ruby", 5 : "Bootstrap"  },
-    tag : { 1 : "pattern", 2 : "poster", 3 : "abstraction", 4 : "people", 5 : "technology", 6 : "media", 7 : "nature", 8 : "food" },
-    price : "45",
-    btn : "Choose illustration",
-    title : "Nature",
-    tagline : "catchy look inspiring bionic form",
-    details : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.`
+  tag: {
+    1: 'pattern', 2: 'poster', 3: 'abstraction', 4: 'people', 5: 'technology', 6: 'media', 7: 'nature', 8: 'food',
   },
-  
+  price: '45',
+  btn: 'Choose illustration',
+  title: 'Nature',
+  tagline: 'catchy look inspiring bionic form',
+  details: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.`,
+},
+
 {
-    id : 3,
-    name : "Multi-Post Stories",
-    img : "./assets/3.png",
-    type : "Canopy",
-    dev : "Back End Dev",
-    year : 2015,
-    source : "https://paulinelali.github.io/potfoilo.github.io/",
-    sourceIcon : "img-link",
-    liveLink : "link to life project",
-    stack : { 1 : "HTML", 2 : "CSS", 3 : "JavaScript", 4 : "Ruby", 5 : "Bootstrap"  },
-    tag : { 1 : "pattern", 2 : "poster", 3 : "abstraction", 4 : "people", 5 : "technology", 6 : "media", 7 : "nature", 8 : "food" },
-    price : "45",
-    btn : "Choose illustration",
-    title : "Nature",
-    tagline : "catchy look inspiring bionic form",
-    details : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.`
+  id: 2,
+  name: 'Tonic',
+  img: './assets/2.png',
+  type: 'Canopy',
+  dev: 'Back End Dev',
+  year: 2015,
+  source: 'https://paulinelali.github.io/potfoilo.github.io/',
+  sourceIcon: 'img-link',
+  liveLink: 'link to life project',
+  stack: {
+    1: 'HTML', 2: 'CSS', 3: 'JavaScript', 4: 'Ruby', 5: 'Bootstrap',
   },
-  
- {
-    id : 4,
-    name : "Multi-Post Stories",
-    img : "./assets/4.png",
-    type : "Canopy",
-    dev : "Back End Dev",
-    year : 2015,
-    source : "https://paulinelali.github.io/potfoilo.github.io/",
-    sourceIcon : "img-link",
-    liveLink : "link to life project",
-    stack : { 1 : "HTML", 2 : "CSS", 3 : "JavaScript", 4 : "Ruby", 5 : "Bootstrap"  },
-    tag : { 1 : "pattern", 2 : "poster", 3 : "abstraction", 4 : "people", 5 : "technology", 6 : "media", 7 : "nature", 8 : "food" },
-    price : "45",
-    btn : "Choose illustration",
-    title : "Nature",
-    tagline : "catchy look inspiring bionic form",
-    details : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.`
-  }]
+  tag: {
+    1: 'pattern', 2: 'poster', 3: 'abstraction', 4: 'people', 5: 'technology', 6: 'media', 7: 'nature', 8: 'food',
+  },
+  price: '45',
+  btn: 'Choose illustration',
+  title: 'Nature',
+  tagline: 'catchy look inspiring bionic form',
+  details: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.`,
+},
+
+{
+  id: 3,
+  name: 'Multi-Post Stories',
+  img: './assets/3.png',
+  type: 'Canopy',
+  dev: 'Back End Dev',
+  year: 2015,
+  source: 'https://paulinelali.github.io/potfoilo.github.io/',
+  sourceIcon: 'img-link',
+  liveLink: 'link to life project',
+  stack: {
+    1: 'HTML', 2: 'CSS', 3: 'JavaScript', 4: 'Ruby', 5: 'Bootstrap',
+  },
+  tag: {
+    1: 'pattern', 2: 'poster', 3: 'abstraction', 4: 'people', 5: 'technology', 6: 'media', 7: 'nature', 8: 'food',
+  },
+  price: '45',
+  btn: 'Choose illustration',
+  title: 'Nature',
+  tagline: 'catchy look inspiring bionic form',
+  details: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.`,
+},
+
+{
+  id: 4,
+  name: 'Multi-Post Stories',
+  img: './assets/4.png',
+  type: 'Canopy',
+  dev: 'Back End Dev',
+  year: 2015,
+  source: 'https://paulinelali.github.io/potfoilo.github.io/',
+  sourceIcon: 'img-link',
+  liveLink: 'link to life project',
+  stack: {
+    1: 'HTML', 2: 'CSS', 3: 'JavaScript', 4: 'Ruby', 5: 'Bootstrap',
+  },
+  tag: {
+    1: 'pattern', 2: 'poster', 3: 'abstraction', 4: 'people', 5: 'technology', 6: 'media', 7: 'nature', 8: 'food',
+  },
+  price: '45',
+  btn: 'Choose illustration',
+  title: 'Nature',
+  tagline: 'catchy look inspiring bionic form',
+  details: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.`,
+}];
 
 const displayModal = (element) => {
-    modalWrapper.innerHTML =`
+  modalWrapper.innerHTML = `
     <div class="ven-modal ven-overlay">
         <ul class="ven-modal-ul">
             <li class="ven-modal-ul-li">
@@ -147,59 +157,54 @@ const displayModal = (element) => {
             </li>
         </ul>
     </div>
-    `
-  }
+    `;
+};
 
-buttons.forEach(btn => {   
-    btn.addEventListener("click", () => {
-        body.classList.add("no-scroll");
-        mainBg.classList.add("bg-blur");
+buttons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    body.classList.add('no-scroll');
+    mainBg.classList.add('bg-blur');
 
-        if(btn.classList.contains("btn-1")){
-            modalWrapper.classList.remove("hide");
-            displayModal(modalElement[0])
-        }
-        
-        if(btn.classList.contains("btn-2")){
-            modalWrapper.classList.remove("hide");
-            console.log(91)
-            displayModal(modalElement[1])
-        }
-        
-        if(btn.classList.contains("btn-3")){
-            modalWrapper.classList.remove("hide");
-            displayModal(modalElement[2])
-            console.log(92)
-        }
-        
-        if(btn.classList.contains("btn-4")){
-            modalWrapper.classList.remove("hide");
-            displayModal(modalElement[3])
-            console.log(93)
-        }
+    if (btn.classList.contains('btn-1')) {
+      modalWrapper.classList.remove('hide');
+      displayModal(modalElement[0]);
+    }
 
-        setTimeout(() => {
-            const cancelBtn = document.querySelector(".ven-cancel-icon");
+    if (btn.classList.contains('btn-2')) {
+      modalWrapper.classList.remove('hide');
+      console.log(91);
+      displayModal(modalElement[1]);
+    }
+
+    if (btn.classList.contains('btn-3')) {
+      modalWrapper.classList.remove('hide');
+      displayModal(modalElement[2]);
+      console.log(92);
+    }
+
+    if (btn.classList.contains('btn-4')) {
+      modalWrapper.classList.remove('hide');
+      displayModal(modalElement[3]);
+      console.log(93);
+    }
+
+    setTimeout(() => {
+      const cancelBtn = document.querySelector('.ven-cancel-icon');
       function cancelFunction() {
-          body.classList.remove("no-scroll");
-          mainBg.classList.remove("bg-blur");
-          modalWrapper.classList.add("hide");
-          }
-      cancelBtn.addEventListener("click", cancelFunction);
-        }, 200)
-
-    });
-    
+        body.classList.remove('no-scroll');
+        mainBg.classList.remove('bg-blur');
+        modalWrapper.classList.add('hide');
+      }
+      cancelBtn.addEventListener('click', cancelFunction);
+    }, 200);
   });
+});
 
 // const observer = new MutationObserver(() => {
 //     if(document.querySelector(".ven-cancel-icon")){
-        
+
 //     }
 // })
-  
+
 // const target = document.querySelector(".modal-wrapper");
 // const config = { childList : true };
-
-  
-  

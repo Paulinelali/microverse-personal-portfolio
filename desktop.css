@@ -388,7 +388,7 @@ form textarea {
   margin-top: 0;
 }
 
-.modal-wraper{
+/* .modal-wraper{
   overflow-y: scroll;
   width: 100%;
   height: 100%;
@@ -401,8 +401,8 @@ form textarea {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-}
-
+} */
+/* 
 .blurer{
   filter: blur(19px);
 }
@@ -469,7 +469,10 @@ form textarea {
 .ven-detail-stack-wrapper p{
   margin-top:0 ;
   margin-bottom:0 ;
-}
+} */
+
+
+
 /* modal popUl */
 /* .modal-wraper{
   position: absolute;
@@ -496,6 +499,6 @@ form textarea {
   overflow: hidden;
 }  */
 
-.hide{
+/* .hide{
   display: none;
-}
+} */
