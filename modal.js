@@ -149,8 +149,6 @@ const displayModal = (element) => {
     `;
 };
 
-
-
 buttons.forEach((btn) => {
   btn.addEventListener('click', () => {
     document.body.classList.add('screen-cover');
@@ -176,4 +174,3 @@ buttons.forEach((btn) => {
     }
   });
 });
-
