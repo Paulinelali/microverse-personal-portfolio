@@ -3,7 +3,7 @@
 
 
 const body = document.querySelector("body");
-const overlay = document.querySelector(".overlay");
+// const overlay = document.querySelector(".overlay");
 const mainBg = document.querySelector(".main-bg");
 const buttons = document.querySelectorAll(".see-projects-btn");
 
@@ -162,25 +162,25 @@ buttons.forEach(btn => {
         
         if(btn.classList.contains("btn-2")){
             modalWrapper.classList.remove("hide");
-            console.log(91)
+           
             displayModal(modalElement[1])
         }
         
         if(btn.classList.contains("btn-3")){
             modalWrapper.classList.remove("hide");
             displayModal(modalElement[2])
-            console.log(92)
+            
         }
         
         if(btn.classList.contains("btn-4")){
             modalWrapper.classList.remove("hide");
             displayModal(modalElement[3])
-            console.log(93)
+            
         }
 
         setTimeout(() => {
             const cancelBtn = document.querySelector(".ven-cancel-icon");
-      function cancelFunction() {
+            function cancelFunction() {
           body.classList.remove("no-scroll");
           mainBg.classList.remove("bg-blur");
           modalWrapper.classList.add("hide");
