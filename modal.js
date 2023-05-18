@@ -177,18 +177,3 @@ buttons.forEach((btn) => {
   });
 });
 
-//   buttons.forEach(btn => {
-//     btn.addEventListener("click", () => {
-//         if(btn.classList.contains("btn-1")){
-
-//         }
-//     })
-//   });
-
-// const displayPopUp = (modalelement) => {
-//     modalelement = modalelement.map((element) => {
-//         .join("")
-//     return modal.innerHTML = modalelement
-// }
-
-// console.log(displayPopUp(modalelement))
