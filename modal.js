@@ -149,9 +149,7 @@ const displayModal = (element) => {
     `;
 };
 
-// <button type="button" class="see-projects-btn tow btn">
-//     ${element.btn}
-// </button>
+
 
 buttons.forEach((btn) => {
   btn.addEventListener('click', () => {
