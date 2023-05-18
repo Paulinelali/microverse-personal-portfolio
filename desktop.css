@@ -340,6 +340,10 @@ form input {
   padding-left: 16px;
 }
 
+form span {
+  color: red;
+}
+
 form textarea {
   width: 100%;
   padding-left: 16px;
