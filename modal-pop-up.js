@@ -3,7 +3,15 @@ const overlay = document.querySelector('.overlay');
 const mainBg = document.querySelector('.main-bg');
 const buttons = document.querySelectorAll('.see-projects-btn');
 
-const modalWrapper = document.querySelector('.modal-wrapper');
+
+
+
+const body = document.querySelector("body");
+// const overlay = document.querySelector(".overlay");
+const mainBg = document.querySelector(".main-bg");
+const buttons = document.querySelectorAll(".see-projects-btn");
+
+const modalWrapper = document.querySelector(".modal-wrapper");
 
 const modalElement = [{
   id: 1,
@@ -165,40 +173,42 @@ buttons.forEach((btn) => {
     body.classList.add('no-scroll');
     mainBg.classList.add('bg-blur');
 
-    if (btn.classList.contains('btn-1')) {
-      modalWrapper.classList.remove('hide');
-      displayModal(modalElement[0]);
-    }
+        if(btn.classList.contains("btn-1")){
+            modalWrapper.classList.remove("hide");
+            displayModal(modalElement[0])
+        }
+        
+        if(btn.classList.contains("btn-2")){
+            modalWrapper.classList.remove("hide");
+           
+            displayModal(modalElement[1])
+        }
+        
+        if(btn.classList.contains("btn-3")){
+            modalWrapper.classList.remove("hide");
+            displayModal(modalElement[2])
+            
+        }
+        
+        if(btn.classList.contains("btn-4")){
+            modalWrapper.classList.remove("hide");
+            displayModal(modalElement[3])
+            
+        }
 
-    if (btn.classList.contains('btn-2')) {
-      modalWrapper.classList.remove('hide');
-      console.log(91);
-      displayModal(modalElement[1]);
-    }
+        setTimeout(() => {
+            const cancelBtn = document.querySelector(".ven-cancel-icon");
+            function cancelFunction() {
+          body.classList.remove("no-scroll");
+          mainBg.classList.remove("bg-blur");
+          modalWrapper.classList.add("hide");
+          }
+      cancelBtn.addEventListener("click", cancelFunction);
+        }, 200)
 
-    if (btn.classList.contains('btn-3')) {
-      modalWrapper.classList.remove('hide');
-      displayModal(modalElement[2]);
-      console.log(92);
-    }
-
-    if (btn.classList.contains('btn-4')) {
-      modalWrapper.classList.remove('hide');
-      displayModal(modalElement[3]);
-      console.log(93);
-    }
-
-    setTimeout(() => {
-      const cancelBtn = document.querySelector('.ven-cancel-icon');
-      function cancelFunction() {
-        body.classList.remove('no-scroll');
-        mainBg.classList.remove('bg-blur');
-        modalWrapper.classList.add('hide');
-      }
-      cancelBtn.addEventListener('click', cancelFunction);
-    }, 200);
+    });
+    
   });
-});
 
 // const observer = new MutationObserver(() => {
 //     if(document.querySelector(".ven-cancel-icon")){
