@@ -1,22 +1,24 @@
-// const { name } = require("xml-name-validator");
 
 
-  // see project popup
-  const modal = document.querySelector(".modal");
-  const buttons = document.querySelectorAll(".see-projects-btn");
-  const body = document.querySelector(".works");
-  const modalWraper = document.querySelector(".modal-wraper");
-  const mainContent = document.querySelector("#main-content");
-  
-  // projects as an elementect
-const modalelement = [{
+
+
+const body = document.querySelector("body");
+const overlay = document.querySelector(".overlay");
+const mainBg = document.querySelector(".main-bg");
+const buttons = document.querySelectorAll(".see-projects-btn");
+
+const modalWrapper = document.querySelector(".modal-wrapper");
+
+
+
+const modalElement = [{
     id : 1,
     name : "Tonic",
     img : "./assets/1.png",
     type : "Canopy",
     dev : "Back End Dev",
     year : 2015,
-    source : "link",
+    source : "https://paulinelali.github.io/potfoilo.github.io/",
     sourceIcon : "img-link",
     liveLink : "link to life project",
     stack : { 1 : "HTML", 2 : "CSS", 3 : "JavaScript", 4 : "Ruby", 5 : "Bootstrap"  },
@@ -36,7 +38,7 @@ const modalelement = [{
     type : "Canopy",
     dev : "Back End Dev",
     year : 2015,
-    source : "link",
+    source : "https://paulinelali.github.io/potfoilo.github.io/",
     sourceIcon : "img-link",
     liveLink : "link to life project",
     stack : { 1 : "HTML", 2 : "CSS", 3 : "JavaScript", 4 : "Ruby", 5 : "Bootstrap"  },
@@ -56,7 +58,7 @@ const modalelement = [{
     type : "Canopy",
     dev : "Back End Dev",
     year : 2015,
-    source : "link",
+    source : "https://paulinelali.github.io/potfoilo.github.io/",
     sourceIcon : "img-link",
     liveLink : "link to life project",
     stack : { 1 : "HTML", 2 : "CSS", 3 : "JavaScript", 4 : "Ruby", 5 : "Bootstrap"  },
@@ -76,7 +78,7 @@ const modalelement = [{
     type : "Canopy",
     dev : "Back End Dev",
     year : 2015,
-    source : "link",
+    source : "https://paulinelali.github.io/potfoilo.github.io/",
     sourceIcon : "img-link",
     liveLink : "link to life project",
     stack : { 1 : "HTML", 2 : "CSS", 3 : "JavaScript", 4 : "Ruby", 5 : "Bootstrap"  },
@@ -88,47 +90,59 @@ const modalelement = [{
     details : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.`
   }]
-  
-  const displayModal = (element) => {
-    modalWraper.innerHTML =`
-    <div class="modal">
+
+const displayModal = (element) => {
+    modalWrapper.innerHTML =`
+    <div class="ven-modal ven-overlay">
         <ul class="ven-modal-ul">
             <li class="ven-modal-ul-li">
-                <ul class="title-canopy-cancel-wrapper">
-                    <li>
+                <ul class="ven-title-canopy-cancel-wrapper">
+                    <li class="ven-title-canopy-year">
                         <h2>${element.name}</h2>
-                        <ul class="canopy-list canopy-list-wrapper">
+                        <ul class="ven-canopy-list ven-canopy-list-wrapper">
                             <li><b>${element.type}</b></li>
-                            <li class="card-empty-list"></li>
+                            <li class="ven-card-empty-list"></li>
                             <li>${element.dev}</li>
-                            <li class="card-empty-list"></li>
+                            <li class="ven-card-empty-list"></li>
                             <li>${element.year}</li>
                         </ul>
                     </li>
                     <li>
-                        <img src="./assets2/Normal Button/Tertiary/Icons/Normal Button/Tertiary/Icons/Icon.svg" alt="cancel icon" style=" width: 10px;">
+                        <img src="./assets2/Normal Button/Tertiary/Icons/Normal Button/Tertiary/Icons/Icon.svg" alt="cancel icon" class="ven-cancel-icon" style="cursor: pointer">
                     </li>
                 </ul>
-                <div class="featured-img-wrapper">
+                <div class="ven-featured-img-wrapper">
                     <img class="" src="${element.img}"">
                 </div>
                 <div class="ven-detail-stack-wrapper">
                     <p>
                         ${element.details}
                     </p>
-                    <div class="ven-tech-used">
-                        <ul>
-                            <li>
-                                ${element.stack[1]}
-                            </li>
-                            <li>
-                            ${element.stack[2]}
-                            </li>
-                            <li>
-                            ${element.stack[3]}
-                            </li>
-                        </ul>
-                    </div>
+                    <ul class="ven-tech-used">
+                        <li>
+                            <ul class="ven-tech-used-stack">
+                                <li>
+                                    ${element.stack[1]}
+                                </li>
+                                <li>
+                                    ${element.stack[2]}
+                                </li>
+                                <li>
+                                    ${element.stack[3]}
+                                </li>
+                                <li>
+                                    ${element.stack[4]}
+                                </li>
+                                <li>
+                                    ${element.stack[5]}
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="ven-sources">
+                            <a href="${element.source}"><button>See live <img src="./assets2/Normal Button/Secondary/Icons/Icon.png"></button></a>
+                            <a href="${element.source}"><button>See source <img src="./assets2/Normal Button/Secondary/Icons/Vector.png"></button></a>
+                        </li>
+                    </ul>
                 </div>
             </li>
         </ul>
@@ -136,53 +150,56 @@ const modalelement = [{
     `
   }
 
-  // <button type="button" class="see-projects-btn tow btn">
-        //     ${element.btn}
-        // </button>
+buttons.forEach(btn => {   
+    btn.addEventListener("click", () => {
+        body.classList.add("no-scroll");
+        mainBg.classList.add("bg-blur");
 
-  buttons.forEach(btn => {
+        if(btn.classList.contains("btn-1")){
+            modalWrapper.classList.remove("hide");
+            displayModal(modalElement[0])
+        }
+        
+        if(btn.classList.contains("btn-2")){
+            modalWrapper.classList.remove("hide");
+            console.log(91)
+            displayModal(modalElement[1])
+        }
+        
+        if(btn.classList.contains("btn-3")){
+            modalWrapper.classList.remove("hide");
+            displayModal(modalElement[2])
+            console.log(92)
+        }
+        
+        if(btn.classList.contains("btn-4")){
+            modalWrapper.classList.remove("hide");
+            displayModal(modalElement[3])
+            console.log(93)
+        }
+
+        setTimeout(() => {
+            const cancelBtn = document.querySelector(".ven-cancel-icon");
+      function cancelFunction() {
+          body.classList.remove("no-scroll");
+          mainBg.classList.remove("bg-blur");
+          modalWrapper.classList.add("hide");
+          }
+      cancelBtn.addEventListener("click", cancelFunction);
+        }, 200)
+
+    });
     
-        btn.addEventListener("click", () => {
-            document.body.classList.add("screen-cover")
-            modalWraper.classList.toggle("hide");
-            // modal.classList.toggle("hide");
-            modalWraper.style.backgroundColor = "rgba(193, 199, 208, 0.4)";
-            mainContent.classList.add("blurer");
-            window.scrollTo(0, 0);
-            console.log(window.pageYOffset)
-            if(btn.classList.contains("btn-1")){
-                displayModal(modalelement[0])
-            }
-            
-            if(btn.classList.contains("btn-2")){
-                displayModal(modalelement[1])
-            }
-            
-            if(btn.classList.contains("btn-3")){
-                displayModal(modalelement[2])
-            }
-            
-            if(btn.classList.contains("btn-4")){
-                displayModal(modalelement[3])
-            }
-        })
-      });
+  });
 
+// const observer = new MutationObserver(() => {
+//     if(document.querySelector(".ven-cancel-icon")){
+        
+//     }
+// })
+  
+// const target = document.querySelector(".modal-wrapper");
+// const config = { childList : true };
 
-
-
-//   buttons.forEach(btn => {
-//     btn.addEventListener("click", () => {
-//         if(btn.classList.contains("btn-1")){
-
-//         }
-//     })
-//   });
-
-// const displayPopUp = (modalelement) => {
-//     modalelement = modalelement.map((element) => {
-//         .join("")
-//     return modal.innerHTML = modalelement
-// }
-
-// console.log(displayPopUp(modalelement))
+  
+  
