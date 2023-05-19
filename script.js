@@ -1,4 +1,3 @@
-
 const hamburger = document.querySelector('.hamburger-container');
 const mobileMenuWrapper = document.querySelector('.mobile-menu-wrapper');
 const cancelMobile = document.querySelector('.cancel-mobile');
@@ -13,7 +12,6 @@ function toggleMenu() {
 function closeMenu() {
   mobileMenuWrapper.classList.toggle('hide');
   hamburger.classList.toggle('hide');
-  // bgMobile.classList.toggle('hide');
   bgMobile.classList.toggle('add-bg-on-mobile');
 }
 hamburger.addEventListener('click', toggleMenu);
@@ -42,80 +40,82 @@ form.addEventListener('submit', (e) => {
   }
 });
 
-const worksContainer = document.querySelector(".works-container");
+const worksContainer = document.querySelector('.works-container');
 
 // define cards elements to be created unto page
 const cardObjects = [
   {
-    img: "./assets/1.png",
-    title: "Tonic",
-    type: "CANOPY",
-    dev: "Back End Dev",
+    img: './assets/1.png',
+    title: 'Tonic',
+    type: 'CANOPY',
+    dev: 'Back End Dev',
     year: 2015,
-    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    btn: "See projects",
+    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    btn: 'See projects',
   },
 
   {
-    img: "./assets/2.png",
-    title: "Multi-Post Stories",
-    type: "CANOPY",
-    dev: "Back End Dev",
+    img: './assets/2.png',
+    title: 'Multi-Post Stories',
+    type: 'CANOPY',
+    dev: 'Back End Dev',
     year: 2015,
-    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    btn: "See projects",
+    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    btn: 'See projects',
   },
   {
-    img: "./assets/3.png",
-    title: "Tonic",
-    type: "CANOPY",
-    dev: "Back End Dev",
+    img: './assets/3.png',
+    title: 'Tonic',
+    type: 'CANOPY',
+    dev: 'Back End Dev',
     year: 2015,
-    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    btn: "See projects",
+    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    btn: 'See projects',
   },
-  
+
   {
-    img: "./assets/4.png",
-    title: "Multi-Post Stories",
-    type: "CANOPY",
-    dev: "Back End Dev",
+    img: './assets/4.png',
+    title: 'Multi-Post Stories',
+    type: 'CANOPY',
+    dev: 'Back End Dev',
     year: 2015,
-    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    btn: "See projects",
+    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    btn: 'See projects',
   },
-]
+];
 // create card unto page
-for (let card = 0; card < cardObjects.length; card++) {
-  worksContainer.innerHTML += `
-  
-  <li class="card-wrapper  margin-h-24 pad-both">
-                <img class="" src="${cardObjects[card].img}" alt="">
-                <div class="card-content-wrapper">
-                    <h2>${cardObjects[card].title}</h2>
-                    <div class="canopy-list-wrapper">
-                        <ul class="canopy-list">
-                            <li><b>${cardObjects[card].type}</b></li>
-                            <li class="card-empty-list"></li>
-                            <li>${cardObjects[card].dev}</li>
-                            <li class="card-empty-list"></li>
-                            <li>${cardObjects[card].year}</li>
-                        </ul>
-                    </div>
-                    <p>${cardObjects[card].description}</p>
-                    <ul class="tech-used">
-                        <li>${cardObjects[card].tech[0]}</li>
-                        <li>${cardObjects[card].tech[1]}</li>
-                        <li>${cardObjects[card].tech[2]}</li>
-                    </ul>
-                    <button type="button" class="see-projects-btn one btn btn-${card + 1}">${cardObjects[card].btn}</button>
-                </div>
-            </li>
-  `
+function createCard() {
+  for (let card = 0; card < cardObjects.length; card++) {
+    worksContainer.innerHTML += `
+    
+    <li class="card-wrapper  margin-h-24 pad-both">
+                  <img class="" src="${cardObjects[card].img}" alt="">
+                  <div class="card-content-wrapper">
+                      <h2>${cardObjects[card].title}</h2>
+                      <div class="canopy-list-wrapper">
+                          <ul class="canopy-list">
+                              <li><b>${cardObjects[card].type}</b></li>
+                              <li class="card-empty-list"></li>
+                              <li>${cardObjects[card].dev}</li>
+                              <li class="card-empty-list"></li>
+                              <li>${cardObjects[card].year}</li>
+                          </ul>
+                      </div>
+                      <p>${cardObjects[card].description}</p>
+                      <ul class="tech-used">
+                          <li>${cardObjects[card].tech[0]}</li>
+                          <li>${cardObjects[card].tech[1]}</li>
+                          <li>${cardObjects[card].tech[2]}</li>
+                      </ul>
+                      <button type="button" class="see-projects-btn one btn btn-${card + 1}">${cardObjects[card].btn}</button>
+                  </div>
+              </li>
+    `;
+  }
 }
 
 // define modal elemnts
@@ -233,7 +233,7 @@ const displayModal = (element) => {
                         </ul>
                     </li>
                     <li>
-                        <img src="./assets2/Normal Button/Tertiary/Icons/Normal Button/Tertiary/Icons/Icon.svg" alt="cancel icon" class="ven-cancel-icon" style="cursor: pointer">
+                        <img src="./assets2/Normal Button/Tertiary/Icons/Normal Button/Tertiary/Icons/Icon.svg" alt="cancel icon" class="ven-cancel-icon" id="cancel-icon" style="cursor: pointer">
                     </li>
                 </ul>
                 <div class="ven-featured-img-wrapper">
@@ -275,129 +275,48 @@ const displayModal = (element) => {
     `;
 };
 
-// buttons.forEach((btn) => {
-//   btn.addEventListener('click', () => {
-//     body.classList.add('no-scroll');
-//     mainBg.classList.add('bg-blur');
+const modalWrapper = document.querySelector('.modal-wrapper');
+const mainBg = document.querySelector('.main-bg');
 
-//     if (btn.classList.contains('btn-1')) {
-//       modalWrapper.classList.remove('hide');
-//       displayModal(modalElement[0]);
-//     }
+window.onload = function () {
+  createCard();
 
-//     if (btn.classList.contains('btn-2')) {
-//       modalWrapper.classList.remove('hide');
+  const venBtn = document.querySelectorAll('.btn');
 
-//       displayModal(modalElement[1]);
-//     }
+  venBtn.forEach((btn) => {
+    const body = document.querySelector('body');
+    btn.addEventListener('click', () => {
+      body.classList.add('no-scroll');
+      mainBg.classList.add('bg-blur');
 
-//     if (btn.classList.contains('btn-3')) {
-//       modalWrapper.classList.remove('hide');
-//       displayModal(modalElement[2]);
-//     }
+      if (btn.classList.contains('btn-1')) {
+        modalWrapper.classList.remove('hide');
+        displayModal(modalElement[0]);
+      }
 
-//     if (btn.classList.contains('btn-4')) {
-//       modalWrapper.classList.remove('hide');
-//       displayModal(modalElement[3]);
-//     }
+      if (btn.classList.contains('btn-2')) {
+        modalWrapper.classList.remove('hide');
 
-//     setTimeout(() => {
-//       const cancelBtn = document.querySelector('.ven-cancel-icon');
-//       function cancelFunction() {
-//         body.classList.remove('no-scroll');
-//         mainBg.classList.remove('bg-blur');
-//         modalWrapper.classList.add('hide');
-//       }
-//       cancelBtn.addEventListener('click', cancelFunction);
-//     }, 200);
-//   });
-// });
-// 
+        displayModal(modalElement[1]);
+      }
 
+      if (btn.classList.contains('btn-3')) {
+        modalWrapper.classList.remove('hide');
+        displayModal(modalElement[2]);
+      }
 
-const modalWrapper = document.querySelector(".modal-wrapper");
+      if (btn.classList.contains('btn-4')) {
+        modalWrapper.classList.remove('hide');
+        displayModal(modalElement[3]);
+      }
 
-window.onload = function(){
-  const venBtn = document.querySelectorAll(".btn");
-  venBtn.forEach( btn => {
-      btn.addEventListener('click', () => {
-            body.classList.add('no-scroll');
-            // mainBg.classList.add('bg-blur');
-        
-            if (btn.classList.contains('btn-1')) {
-              modalWrapper.classList.remove('hide');
-              displayModal(modalElement[0]);
-            }
-        
-            if (btn.classList.contains('btn-2')) {
-              modalWrapper.classList.remove('hide');
-        
-              displayModal(modalElement[1]);
-            }
-        
-            if (btn.classList.contains('btn-3')) {
-              modalWrapper.classList.remove('hide');
-              displayModal(modalElement[2]);
-            }
-        
-            if (btn.classList.contains('btn-4')) {
-              modalWrapper.classList.remove('hide');
-              displayModal(modalElement[3]);
-            }
-    })})}
-
-  
-//   function callPopUp(e) {
-//     e.addEventListener("click", function(){
-//         // body.classList.add('no-scroll');
-//         // mainBg.classList.add('bg-blur');
-    
-//         if (e.classList.contains('btn-1')) {
-//           modalWrapper.classList.remove('hide');
-//           displayModal(modalElement[0]);
-//         }
-    
-//         if (e.classList.contains('btn-2')) {
-//           modalWrapper.classList.remove('hide');
-    
-//           displayModal(modalElement[1]);
-//         }
-    
-//         if (e.classList.contains('btn-3')) {
-//           modalWrapper.classList.remove('hide');
-//           displayModal(modalElement[2]);
-//         }
-    
-//         if (e.classList.contains('btn-4')) {
-//           modalWrapper.classList.remove('hide');
-//           displayModal(modalElement[3]);
-//       console.log(e)
-//     }
-//   })
-// }
-
-// buttons.forEach((btn) => {
-//   btn.addEventListener('click', () => {
-//     body.classList.add('no-scroll');
-//     mainBg.classList.add('bg-blur');
-
-//     if (btn.classList.contains('btn-1')) {
-//       modalWrapper.classList.remove('hide');
-//       displayModal(modalElement[0]);
-//     }
-
-//     if (btn.classList.contains('btn-2')) {
-//       modalWrapper.classList.remove('hide');
-
-//       displayModal(modalElement[1]);
-//     }
-
-//     if (btn.classList.contains('btn-3')) {
-//       modalWrapper.classList.remove('hide');
-//       displayModal(modalElement[2]);
-//     }
-
-//     if (btn.classList.contains('btn-4')) {
-//       modalWrapper.classList.remove('hide');
-//       displayModal(modalElement[3]);
-//     })
+      const cancelIcon = document.querySelector('.ven-cancel-icon');
+      const modalContainer = document.querySelector('.ven-modal');
+      cancelIcon.addEventListener('click', () => {
+        body.classList.remove('no-scroll');
+        mainBg.classList.remove('bg-blur');
+        modalContainer.classList.toggle('hide');
+      });
+    });
+  });
+};

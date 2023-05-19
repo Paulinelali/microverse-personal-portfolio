@@ -1,58 +1,55 @@
-
-
 // array to hold each card
 const cardObjects = [
   {
-    img: "./assets/1.png",
-    title: "Tonic",
-    type: "CANOPY",
-    dev: "Back End Dev",
+    img: './assets/1.png',
+    title: 'Tonic',
+    type: 'CANOPY',
+    dev: 'Back End Dev',
     year: 2015,
-    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    btn: "See projects",
+    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    btn: 'See projects',
   },
 
   {
-    img: "./assets/2.png",
-    title: "Multi-Post Stories",
-    type: "CANOPY",
-    dev: "Back End Dev",
+    img: './assets/2.png',
+    title: 'Multi-Post Stories',
+    type: 'CANOPY',
+    dev: 'Back End Dev',
     year: 2015,
-    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    btn: "See projects",
+    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    btn: 'See projects',
   },
   {
-    img: "./assets/3.png",
-    title: "Tonic",
-    type: "CANOPY",
-    dev: "Back End Dev",
+    img: './assets/3.png',
+    title: 'Tonic',
+    type: 'CANOPY',
+    dev: 'Back End Dev',
     year: 2015,
-    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    btn: "See projects",
+    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    btn: 'See projects',
   },
-  
-  {
-    img: "./assets/4.png",
-    title: "Multi-Post Stories",
-    type: "CANOPY",
-    dev: "Back End Dev",
-    year: 2015,
-    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    btn: "See projects",
-  },
-]
 
-// create default card objects 
+  {
+    img: './assets/4.png',
+    title: 'Multi-Post Stories',
+    type: 'CANOPY',
+    dev: 'Back End Dev',
+    year: 2015,
+    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    btn: 'See projects',
+  },
+];
+
+// create default card objects
 // function loadCardObjectsToPage(cardObjects){cardObjects.forEach((obj) => {
-  
- 
+
 // })}
 
-const worksContainer = document.querySelector(".works-container")
+const worksContainer = document.querySelector('.works-container');
 
 for (let card = 0; card < cardObjects.length; card++) {
   worksContainer.innerHTML += `
@@ -79,7 +76,7 @@ for (let card = 0; card < cardObjects.length; card++) {
                     <button type="button" class="see-projects-btn one btn btn-1">${cardObjects.btn}</button>
                 </div>
             </li>
-  `
+  `;
 }
 
 // see project popup
@@ -235,7 +232,6 @@ buttons.forEach((btn) => {
   btn.addEventListener('click', () => {
     document.body.classList.add('screen-cover');
     modalWraper.classList.toggle('hide');
-    // modal.classList.toggle("hide");
     modalWraper.style.backgroundColor = 'rgba(193, 199, 208, 0.4)';
     mainContent.classList.add('blurer');
     window.scrollTo(0, 0);
