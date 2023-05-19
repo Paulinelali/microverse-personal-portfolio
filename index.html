@@ -9,13 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" media="screen and (max-width: 600px)" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="mobile.css">
     <link rel="stylesheet" media="screen and (min-width: 601px)" href="desktop.css">
+    <link rel="stylesheet" href="modal-pop-up.css">
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/97d9fb687f.js" crossorigin="anonymous"></script>
     <title>Ayomide S.E.P</title>
 </head>
-<body>
+<body id="body">
+<main id="main-content " class="main-bg">
     <header class="header">
         <nav class="nav pad-aside bg-mobile ">
             <a href="#" class="logo">
@@ -23,7 +25,7 @@
             </a>
             <a href="#"  class="hamburger-container" ><img src="./assets/hamburger.png" class="hamburger" alt="se"></a>
 
-            <div class="mobile-menu hide ">
+            <div class="mobile-menu mobile-menu-wrapper hide-mobile-nav hide">
                 <ul>
                     <li><a href="#portfolio" class="mobile-menu-link">Portfolio</a></li>
                     <li><a href="#about" class="mobile-menu-link">About</a></li>
@@ -33,7 +35,7 @@
                     <img src="./assets2/Normal Button/Tertiary/Icons/Icon.png" class="cancel-mobile" alt="">
                 </div>
             </div>
-            <div class="nav-link-desktop hide">
+            <div class="nav-link-desktop hide-desktop-nav">
                 <ul>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">About</a></li>
@@ -94,7 +96,7 @@
                             JavaScript
                         </li>
                     </ul>
-                    <button type="button" class="see-projects-btn btn">
+                    <button type="button" class="see-projects-btn one btn btn-1">
                         See projects
                     </button>
                 </div>
@@ -128,7 +130,7 @@
                             JavaScript
                         </li>
                     </ul>
-                    <button type="button" class="see-projects-btn btn">
+                    <button type="button" class="see-projects-btn tow btn btn-2">
                         See projects
                     </button>
                 </div>
@@ -161,7 +163,7 @@
                             JavaScript
                         </li>
                     </ul>
-                    <button type="button" class="see-projects-btn btn">
+                    <button type="button" class="see-projects-btn three btn btn-3">
                         See projects
                     </button>
                 </div>
@@ -195,13 +197,14 @@
                             JavaScript
                         </li>
                     </ul>
-                    <button type="button" class="see-projects-btn btn">
+                    <button type="button" class="see-projects-btn four btn btn-4">
                         See projects
                     </button>
                 </div>
             </li>
         </ul>
     </section>
+
 
     <section class="last-section">
     <div class="about-social" id="about">
@@ -268,15 +271,26 @@
                     I'd love to help with it!
                 </p>
             </div>
-            <form action="https://formspree.io/f/xeqwrwvv" method="POST">
-                <input type="text" name="name" maxlength="30" placeholder="Lorem ipsum" >
-                <input type="email" name="email" placeholder="Loremipsum@gmail.com" >
+            <form action="https://formspree.io/f/xeqwrwvv" method="POST" id="form">
+                <input type="text" name="name" maxlength="30" placeholder="Lorem ipsum" id="user-name">
+                <span id="name-error"></span>
+                <input type="email" name="email" placeholder="Loremipsum@gmail.com" id="user-email">
+                
                 <textarea name="message" maxlength="500" id="form-textarea" cols="30" rows="10" placeholder="Write your message here" required></textarea>
-                <button class="footer-submit-btn" type="submit">Get in touch</button>
+                <div class="contact-form-btn-wrapper">
+                    <button class="footer-submit-btn" type="submit">Get in touch</button><span id="email-error"></span>
+                </div>
             </form>
             <hr class="footer-horizontal-line">
         </section>
     </footer>
+</main>
+<!-- modal popUp-->
+
+<div class="modal-wrapper">
+    
+</div>
+<script src="modal-pop-up.js"></script>
 
     <script src="script.js"></script>
 </body>

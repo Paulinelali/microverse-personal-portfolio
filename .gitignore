@@ -2,4 +2,6 @@ node_modules
 .history
 .assets2
 .vscode
+modal.js
+modal.html
 
