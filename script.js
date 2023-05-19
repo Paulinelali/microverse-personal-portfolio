@@ -55,7 +55,7 @@ function validateEmail() {
   return true;
 }
 
-// LOCAL SRORAGE
+// LOCAL STORAGE
 const formName = document.getElementById('user-name');
 const email = document.getElementById('user-email');
 const formText = document.getElementById('user-text');
