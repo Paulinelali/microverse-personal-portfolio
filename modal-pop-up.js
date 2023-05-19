@@ -1,10 +1,4 @@
-// const body = document.querySelector('body');
-// const overlay = document.querySelector('.overlay');
-// const mainBg = document.querySelector('.main-bg');
-// const buttons = document.querySelectorAll('.see-projects-btn');
-
 const body = document.querySelector('body');
-// const overlay = document.querySelector(".overlay");
 const mainBg = document.querySelector('.main-bg');
 const buttons = document.querySelectorAll('.see-projects-btn');
 
@@ -202,12 +196,3 @@ buttons.forEach((btn) => {
     }, 200);
   });
 });
-
-// const observer = new MutationObserver(() => {
-//     if(document.querySelector(".ven-cancel-icon")){
-
-//     }
-// })
-
-// const target = document.querySelector(".modal-wrapper");
-// const config = { childList : true };

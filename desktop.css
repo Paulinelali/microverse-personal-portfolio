@@ -340,6 +340,10 @@ form input {
   padding-left: 16px;
 }
 
+form span {
+  color: red;
+}
+
 form textarea {
   width: 100%;
   padding-left: 16px;
@@ -386,4 +390,10 @@ form textarea {
   text-align: center;
   color: #ebebff;
   margin-top: 0;
+}
+
+.contact-form-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  color: white;
 }
