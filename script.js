@@ -117,16 +117,69 @@ for (let card = 0; card < cardObjects.length; card++) {
             </li>
   `
 }
+const modalWrapper = document.querySelector(".modal-wrapper");
 
 window.onload = function(){
   const venBtn = document.querySelectorAll(".btn");
   venBtn.forEach( btn => {
-    name(btn)
-  })
+    btn.addEventListener("click", jkl(btn))
+  })}
 
-  function name(e) {
-    e.addEventListener("click", function(){
-      console.log(e)
-    })
+  function jkl(e) {
+    console.log(e)
   }
-}
+
+//   function callPopUp(e) {
+//     e.addEventListener("click", function(){
+//         // body.classList.add('no-scroll');
+//         // mainBg.classList.add('bg-blur');
+    
+//         if (e.classList.contains('btn-1')) {
+//           modalWrapper.classList.remove('hide');
+//           displayModal(modalElement[0]);
+//         }
+    
+//         if (e.classList.contains('btn-2')) {
+//           modalWrapper.classList.remove('hide');
+    
+//           displayModal(modalElement[1]);
+//         }
+    
+//         if (e.classList.contains('btn-3')) {
+//           modalWrapper.classList.remove('hide');
+//           displayModal(modalElement[2]);
+//         }
+    
+//         if (e.classList.contains('btn-4')) {
+//           modalWrapper.classList.remove('hide');
+//           displayModal(modalElement[3]);
+//       console.log(e)
+//     }
+//   })
+// }
+
+// buttons.forEach((btn) => {
+//   btn.addEventListener('click', () => {
+//     body.classList.add('no-scroll');
+//     mainBg.classList.add('bg-blur');
+
+//     if (btn.classList.contains('btn-1')) {
+//       modalWrapper.classList.remove('hide');
+//       displayModal(modalElement[0]);
+//     }
+
+//     if (btn.classList.contains('btn-2')) {
+//       modalWrapper.classList.remove('hide');
+
+//       displayModal(modalElement[1]);
+//     }
+
+//     if (btn.classList.contains('btn-3')) {
+//       modalWrapper.classList.remove('hide');
+//       displayModal(modalElement[2]);
+//     }
+
+//     if (btn.classList.contains('btn-4')) {
+//       modalWrapper.classList.remove('hide');
+//       displayModal(modalElement[3]);
+//     })
