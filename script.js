@@ -23,44 +23,20 @@ tags.forEach((tag) => {
   });
 });
 
-const nameError = document.querySelector('#name-error');
-const emailError = document.querySelector('#email-error');
-const submitError = document.querySelector('#submit-error');
-function validate() {
-  const name = document.getElementById('user-name').value;
-  if (name.lenght === 0) {
-    nameError.innerHTML = 'Name is required';
-    return false;
-  }
-  if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
-    nameError.innerHTML = 'Invalid name';
-    return false;
-  }
-  nameError.innerHTML = '<img src="checkbox-checked-solid-24 (1).png" alt="check icon">';
-  return true;
-}
+const form = document.querySelector('#form');
 
-function validateEmail() {
-  const email = document.getElementById('user-email').value;
+form.addEventListener('submit', (e) => {
+  // Prevent form submission
+  e.preventDefault();
 
-  if (email.lenght === 0) {
-    emailError.innerHTML = 'Email is required';
-    return false;
-  }
-  if (!email.match(/^([a-za-z0-9_\-.])+@([a-za-z0-9_\-.])+\.([a-za-z]{2,4})$/)) {
-    emailError.innerHTML = 'Invalid email';
-    return false;
-  }
-  emailError.innerHTML = '<img src="checkbox-checked-solid-24 (1).png" alt="check icon">';
-  return true;
-}
+  // Validate form fields
+  const email = document.querySelector('#user-email').value;
 
-function validateForm() {
-  if (!validate() || !validateEmail()) {
-    submitError.style.display = 'block';
-    submitError.innerHTML = 'Please fix errors to submit';
-    setTimeout(() => { submitError.style.display = 'none'; }, 3000);
-    return false;
-  } return true;
-}
-validateForm();
+  // Check if name is empty
+  if (email !== email.toLowerCase()) {
+    const errorDiv = document.querySelector('#email-error');
+    errorDiv.innerText = 'The email address must be lowercase';
+  } else {
+    form.submit();
+  }
+});

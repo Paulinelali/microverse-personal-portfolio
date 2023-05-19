@@ -479,3 +479,9 @@ i {
   -ms-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
 }
+
+.contact-form-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
