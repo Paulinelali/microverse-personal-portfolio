@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 const hamburger = document.querySelector('.hamburger-container');
 const mobileMenuWrapper = document.querySelector('.mobile-menu-wrapper');
 const cancelMobile = document.querySelector('.cancel-mobile');
@@ -215,6 +216,9 @@ const modalElement = [{
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.`,
 }];
 
+const modalWrapper = document.querySelector('.modal-wrapper');
+const mainBg = document.querySelector('.main-bg');
+
 // create modal
 const displayModal = (element) => {
   modalWrapper.innerHTML = `
@@ -275,10 +279,7 @@ const displayModal = (element) => {
     `;
 };
 
-const modalWrapper = document.querySelector('.modal-wrapper');
-const mainBg = document.querySelector('.main-bg');
-
-window.onload = function () {
+window.onload = () => {
   createCard();
 
   const venBtn = document.querySelectorAll('.btn');
