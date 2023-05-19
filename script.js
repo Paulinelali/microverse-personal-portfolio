@@ -1,3 +1,4 @@
+
 const hamburger = document.querySelector('.hamburger-container');
 const mobileMenuWrapper = document.querySelector('.mobile-menu-wrapper');
 const cancelMobile = document.querySelector('.cancel-mobile');
@@ -40,3 +41,92 @@ form.addEventListener('submit', (e) => {
     form.submit();
   }
 });
+
+const worksContainer = document.querySelector(".works-container");
+
+const cardObjects = [
+  {
+    img: "./assets/1.png",
+    title: "Tonic",
+    type: "CANOPY",
+    dev: "Back End Dev",
+    year: 2015,
+    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    btn: "See projects",
+  },
+
+  {
+    img: "./assets/2.png",
+    title: "Multi-Post Stories",
+    type: "CANOPY",
+    dev: "Back End Dev",
+    year: 2015,
+    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    btn: "See projects",
+  },
+  {
+    img: "./assets/3.png",
+    title: "Tonic",
+    type: "CANOPY",
+    dev: "Back End Dev",
+    year: 2015,
+    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    btn: "See projects",
+  },
+  
+  {
+    img: "./assets/4.png",
+    title: "Multi-Post Stories",
+    type: "CANOPY",
+    dev: "Back End Dev",
+    year: 2015,
+    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    btn: "See projects",
+  },
+]
+
+
+for (let card = 0; card < cardObjects.length; card++) {
+  worksContainer.innerHTML += `
+  
+  <li class="card-wrapper  margin-h-24 pad-both">
+                <img class="" src="${cardObjects[card].img}" alt="">
+                <div class="card-content-wrapper">
+                    <h2>${cardObjects[card].title}</h2>
+                    <div class="canopy-list-wrapper">
+                        <ul class="canopy-list">
+                            <li><b>${cardObjects[card].type}</b></li>
+                            <li class="card-empty-list"></li>
+                            <li>${cardObjects[card].dev}</li>
+                            <li class="card-empty-list"></li>
+                            <li>${cardObjects[card].year}</li>
+                        </ul>
+                    </div>
+                    <p>${cardObjects[card].description}</p>
+                    <ul class="tech-used">
+                        <li>${cardObjects[card].tech[0]}</li>
+                        <li>${cardObjects[card].tech[1]}</li>
+                        <li>${cardObjects[card].tech[2]}</li>
+                    </ul>
+                    <button type="button" class="see-projects-btn one btn btn-${card + 1}">${cardObjects[card].btn}</button>
+                </div>
+            </li>
+  `
+}
+
+window.onload = function(){
+  const venBtn = document.querySelectorAll(".btn");
+  venBtn.forEach( btn => {
+    name(btn)
+  })
+
+  function name(e) {
+    e.addEventListener("click", function(){
+      console.log(e)
+    })
+  }
+}

@@ -1,4 +1,86 @@
-// const { name } = require("xml-name-validator");
+
+
+// array to hold each card
+const cardObjects = [
+  {
+    img: "./assets/1.png",
+    title: "Tonic",
+    type: "CANOPY",
+    dev: "Back End Dev",
+    year: 2015,
+    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    btn: "See projects",
+  },
+
+  {
+    img: "./assets/2.png",
+    title: "Multi-Post Stories",
+    type: "CANOPY",
+    dev: "Back End Dev",
+    year: 2015,
+    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    btn: "See projects",
+  },
+  {
+    img: "./assets/3.png",
+    title: "Tonic",
+    type: "CANOPY",
+    dev: "Back End Dev",
+    year: 2015,
+    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    btn: "See projects",
+  },
+  
+  {
+    img: "./assets/4.png",
+    title: "Multi-Post Stories",
+    type: "CANOPY",
+    dev: "Back End Dev",
+    year: 2015,
+    description: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    btn: "See projects",
+  },
+]
+
+// create default card objects 
+// function loadCardObjectsToPage(cardObjects){cardObjects.forEach((obj) => {
+  
+ 
+// })}
+
+const worksContainer = document.querySelector(".works-container")
+
+for (let card = 0; card < cardObjects.length; card++) {
+  worksContainer.innerHTML += `
+  
+  <li class="card-wrapper  margin-h-24 pad-both">
+                <img class="" src="${cardObjects.img}" alt="">
+                <div class="card-content-wrapper">
+                    <h2>${cardObjects.title}</h2>
+                    <div class="canopy-list-wrapper">
+                        <ul class="canopy-list">
+                            <li><b>${cardObjects.type}</b></li>
+                            <li class="card-empty-list"></li>
+                            <li>${cardObjects.dev}</li>
+                            <li class="card-empty-list"></li>
+                            <li>${cardObjects.year}</li>
+                        </ul>
+                    </div>
+                    <p>${cardObjects.description}</p>
+                    <ul class="tech-used">
+                        <li>${cardObjects.tech[0]}</li>
+                        <li>${cardObjects.tech[1]}</li>
+                        <li>${cardObjects.tech[2]}</li>
+                    </ul>
+                    <button type="button" class="see-projects-btn one btn btn-1">${cardObjects.btn}</button>
+                </div>
+            </li>
+  `
+}
 
 // see project popup
 const buttons = document.querySelectorAll('.see-projects-btn');
