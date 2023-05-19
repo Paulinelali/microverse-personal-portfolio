@@ -112,7 +112,7 @@ function createCard() {
                           <li>${cardObjects[card].tech[1]}</li>
                           <li>${cardObjects[card].tech[2]}</li>
                       </ul>
-                      <button type="button" class="see-projects-btn one btn btn-${card + 1}">${cardObjects[card].btn}</button>
+                      <button type="button" class="ven-see-projects-btn see-projects-btn one btn btn-${card + 1}">${cardObjects[card].btn}</button>
                   </div>
               </li>
     `;
@@ -282,7 +282,7 @@ const displayModal = (element) => {
 window.onload = () => {
   createCard();
 
-  const venBtn = document.querySelectorAll('.btn');
+  const venBtn = document.querySelectorAll('.ven-see-projects-btn');
 
   venBtn.forEach((btn) => {
     const body = document.querySelector('body');

@@ -62,6 +62,7 @@
 
 .ven-tech-used-stack {
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
 }
 
@@ -118,7 +119,6 @@ li {
 .ven-detail-stack-wrapper {
   display: flex;
   gap: 36px;
-  margin-bottom: 111px;
 }
 
 .ven-tech-used {
@@ -175,9 +175,5 @@ ul {
     display: flex;
     justify-content: center;
   }
-
-  .ven-tech-used-stack {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
-  }
+  
 }
