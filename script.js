@@ -23,67 +23,21 @@ tags.forEach((tag) => {
   });
 });
 
-const nameError = document.querySelector('#name-error');
-const emailError = document.querySelector('#email-error');
-const submitError = document.querySelector('#submit-error');
-function validate() {
-  const name = document.getElementById('user-name').value;
-  if (name.lenght === 0) {
-    nameError.innerHTML = 'Name is required';
-    return false;
-  }
-  if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
-    nameError.innerHTML = 'Invalid name';
-    return false;
-  }
-  nameError.innerHTML = '<img src="checkbox-checked-solid-24 (1).png" alt="check icon">';
-  return true;
-}
+const form = document.querySelector('#form');
 
-function validateEmail() {
-  const email = document.getElementById('user-email').value;
+form.addEventListener('submit', (e) => {
+  // Prevent form submission
+  e.preventDefault();
 
-  if (email.lenght === 0) {
-    emailError.innerHTML = 'Email is required';
-    return false;
+  // Validate form fields
+  const email = document.querySelector('#user-email').value;
+
+  // Check if name is empty
+  if (email !== email.toLowerCase()) {
+    const errorDiv = document.querySelector('#email-error');
+    errorDiv.innerText = 'The email address must be lowercase';
+  } else {
+    form.submit();
   }
-  if (!email.match(/^([a-za-z0-9_\-.])+@([a-za-z0-9_\-.])+\.([a-za-z]{2,4})$/)) {
-    emailError.innerHTML = 'Invalid email';
-    return false;
-  }
-  emailError.innerHTML = '<img src="checkbox-checked-solid-24 (1).png" alt="check icon">';
-  return true;
-}
+});
 
-// LOCAL STORAGE
-const formName = document.getElementById('user-name');
-const email = document.getElementById('user-email');
-const formText = document.getElementById('user-text');
-
-const localData = () => {
-  const userData = {
-    userName: formName.value,
-    UserMail: email.value,
-    txt: formText.value,
-  };
-  localStorage.setItem('userData', JSON.stringify(userData));
-};
-const storedDetails = () => {
-  const info = JSON.parse(localStorage.getItem('userData'));
-  formName.value = info.formName;
-  email.value = info.email;
-  formText.value = info.formText;
-};
-
-function validateForm() {
-  if (!validate() || !validateEmail()) {
-    submitError.style.display = 'block';
-    submitError.innerHTML = 'Please fix errors to submit';
-    setTimeout(() => { submitError.style.display = 'none'; }, 3000);
-    return false;
-  }
-  localData();
-  storedDetails();
-  return true;
-}
-validateForm();
