@@ -55,12 +55,35 @@ function validateEmail() {
   return true;
 }
 
+// LOCAL SRORAGE
+const formName = document.getElementById('user-name');
+const email = document.getElementById('user-email');
+const formText = document.getElementById('user-text');
+
+const localData = () => {
+  const userData = {
+    userName: formName.value,
+    UserMail: email.value,
+    txt: formText.value,
+  };
+  localStorage.setItem('userData', JSON.stringify(userData));
+};
+const storedDetails = () => {
+  const info = JSON.parse(localStorage.getItem('userData'));
+  formName.value = info.formName;
+  email.value = info.email;
+  formText.value = info.formText;
+};
+
 function validateForm() {
   if (!validate() || !validateEmail()) {
     submitError.style.display = 'block';
     submitError.innerHTML = 'Please fix errors to submit';
     setTimeout(() => { submitError.style.display = 'none'; }, 3000);
     return false;
-  } return true;
+  } 
+  localData();
+  storedDetails();
+    return true;
 }
 validateForm();
