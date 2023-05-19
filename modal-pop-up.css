@@ -62,7 +62,6 @@
 
 .ven-tech-used-stack {
   display: flex;
-  flex-wrap: wrap;
   gap: 5px;
 }
 
@@ -164,6 +163,10 @@ ul {
 }
 
 @media only screen and (max-width: 600px) {
+  .ven-tech-used-stack {
+    flex-wrap: wrap;
+  }
+
   .ven-detail-stack-wrapper {
     display: flex;
     flex-direction: column;
