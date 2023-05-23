@@ -2,7 +2,6 @@
   overflow: hidden;
 }
 
-/* wrapper */
 .ven-overlay {
   position: fixed;
   overflow-y: scroll;
@@ -22,7 +21,6 @@
   display: block;
 }
 
-/* modal pop-up inner div */
 .ven-overlay .ven-modal-ul {
   width: 80%;
   margin: auto;
@@ -118,7 +116,6 @@ li {
 .ven-detail-stack-wrapper {
   display: flex;
   gap: 36px;
-  margin-bottom: 111px;
 }
 
 .ven-tech-used {
@@ -173,11 +170,12 @@ ul {
 
   .ven-sources {
     display: flex;
+    flex-basis: 25%;
     justify-content: center;
   }
 
   .ven-tech-used-stack {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
