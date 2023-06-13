@@ -110,7 +110,7 @@ This is a milestone project which means features will be added in phases.
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo 
-https://paulinelali.github.io/potfoilo.github.io/
+[See Live project](https://paulinelali.github.io/microverse-personal-portfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
